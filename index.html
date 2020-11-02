@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corona virus tracker</title>
+
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/style.css"/>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+
+<script src="js/myscript.js"></script>
+</head>
+
+<body ng-app="MyApp" ng-controller="MyCtrl">
+    <img  class="center1" src="img/c2.png" height="250" width="400" />
+    
+    
+<h1 class="text-center" style="color: beige;background-color: red;" ng-mouseover="change()" ng-mouseleave="leave()"> {{title}}</h1>
+    <br/>
+
+
+    <iframe width="1350" height="600" src="https://www.youtube.com/embed/i0ZabxXmH4Y?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br/><br/>
+    <p class="text">
+
+    Coronaviruses usually cause the common cold, though they can be responsible for more severe illnesses.
+
+Over the past 80 years, scientists have found that these viruses can infect mice, rats, dogs, cats, turkeys, horses, pigs, and cattle. Sometimes, these animals transmit the viruses to humans.
+
+Most recently, authorities identified a new coronavirus outbreak in China that has now reached other countries. The virus is called severe acute respiratory syndrome coronavirus 2 (SARS-CoV-2) and it can cause COVID-19.
+
+
+
+What is a coronavirus?
+
+Researchers first identified a coronavirus in 1937, isolating one that was responsible for a type of bronchitis in birds that had the potential to devastate poultry stocks.
+
+Scientists found evidence of human coronaviruses in the 1960s, in the noses of people with the common cold.
+
+Human coronaviruses that are particularly prevalent include 229E, NL63, OC43, and HKU1.
+
+The name “coronavirus” comes from the crown-like projections on their surfaces. “Corona” in Latin means “halo” or “crown.”
+
+Among humans, coronavirus infections most often occur during the winter months and early spring.
+</p>
+<br/>
+
+<img  class="center" src="img/c3.jpg" height="800" width="1300"/>
+
+<div class="jumbotron text-center">
+    <h1> Worldwide</h1> <br/>
+<div class="row text-center">
+    <div class="col-md-4">
+        <div class="card bg-warning text-white">
+            <div class="card-body">
+          <h3> Confirmed Cases</h3>
+          <h3>{{alldata.confirmed.value}}</h3>
+            </div>
+          </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card bg-danger text-white">
+          <div class="card-body">
+         <h3>Death Cases</h3>
+         <h3>{{alldata.deaths.value}}</h3>
+          </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card bg-success text-white">
+            <div class="card-body">
+            <h3>Recovered Cases</h3>
+            <h3>{{alldata.recovered.value}}</h3>
+            </div>
+          </div>
+    </div>
+</div>
+<br/>
+<br/>
+<input type="text" placeholder="Enter the name of the country" class="form-control" ng-model="c" ng-change="getdata()"/>
+
+<div class="jumbotron text-center">
+    <h1> Country Name - {{count}}</h1><br/>
+    <div class="row text-center">
+        
+        <div class="col-md-4">
+            <div class="card bg-warning text-white">
+                <div class="card-body">
+              <h3> Confirmed Cases</h3>
+              <h3>{{cdata.confirmed.value}}</h3>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-4">
+          <div class="card bg-danger text-white">
+              <div class="card-body">
+             <h3>Death Cases</h3>
+             <h3>{{cdata.deaths.value}}</h3>
+              </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card bg-success text-white">
+                <div class="card-body">
+                <h3>Recovered Cases</h3>
+                <h3>{{cdata.recovered.value}}</h3>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+    
+    
+    
+
+    
+</body>
+</html>
