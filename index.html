@@ -22,16 +22,19 @@
 </head>
 
 <body ng-app="MyApp" ng-controller="MyCtrl">
-    <img  class="center1" src="img/c2.png" height="250" width="400" />
+    <img  class="center1" src="img/c2.png" height="250" width="400" style="width:66%;" />
     
     
 <h1 class="text-center" style="color: beige;background-color: red;" ng-mouseover="change()" ng-mouseleave="leave()"> {{title}}</h1>
     <br/>
 
 
-    <iframe width="1350" height="600" src="https://www.youtube.com/embed/i0ZabxXmH4Y?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <div class="videoWrapper">
+    <iframe class="responsive-iframe" width="1350" height="600" src="https://www.youtube.com/embed/i0ZabxXmH4Y?autoplay=1&mute=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 <br/><br/>
-    <p class="text">
+
+</div>
+    <p class="text" style="width:100%;">
 
     Coronaviruses usually cause the common cold, though they can be responsible for more severe illnesses.
 
@@ -55,7 +58,7 @@ Among humans, coronavirus infections most often occur during the winter months a
 </p>
 <br/>
 
-<img  class="center" src="img/c3.jpg" height="800" width="1300"/>
+<img  class="center" src="img/c3.jpg" height="900" width="1300" style="width:80%;"/>
 
 <div class="jumbotron text-center">
     <h1> Worldwide</h1> <br/>
